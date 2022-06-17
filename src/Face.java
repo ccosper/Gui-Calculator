@@ -531,7 +531,7 @@ public class Face extends javax.swing.JFrame {
 
     private void button5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button5MouseClicked
         Calculate cal = new Calculate(textArea1.getText().toString());
-        textArea2.setText(cal.enter());
+        textArea2.setText(String.valueOf(cal.enter()));
     }//GEN-LAST:event_button5MouseClicked
 
     private void button12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button12ActionPerformed
