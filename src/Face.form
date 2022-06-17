@@ -302,6 +302,9 @@
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="button19"/>
       </AccessibilityProperties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button19MouseClicked"/>
+      </Events>
     </Component>
     <Component class="java.awt.Button" name="button20">
       <Properties>
