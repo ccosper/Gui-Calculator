@@ -9,7 +9,7 @@ public class Calculate {
         this.opr = opr;
     }
     
-    public int enter() {
+    public double enter() {
         ArrayList<String> temp = new ArrayList<>();
         String num = "";
         for(int i = 0; i < opr.length(); i++){
@@ -40,11 +40,11 @@ public class Calculate {
         }        
         
         System.err.println(temp.toString());
-        int result = pemdas(temp);
+        double result = pemdas(temp);
         return result;
     }
     
-    public int pemdas(ArrayList<String> array){
+    public double pemdas(ArrayList<String> array){
         while (!(array.size() == 1)){
             if (array.contains("(")){
                 int p1, p2;
@@ -56,13 +56,13 @@ public class Calculate {
                     par.add(array.get(j));
                 }
 
-                int outcome = pemdas(par);
-                //array.removeAll();
+                double outcome = pemdas(par);
                 array.set(p1, String.valueOf(outcome));
+                array.subList(p1+1, p2).clear();                        
 
             }
 
-            if (array.contains("*") || array.contains("/")){
+            while (array.contains("*") || array.contains("/")){
                 int m, d;
                 m = array.indexOf("*");
                 d = array.indexOf("/");
@@ -80,10 +80,51 @@ public class Calculate {
 
                 }
                 else{
+                    double num1 = Integer.parseInt(array.get(d-1));
+                    double num2 = Integer.parseInt(array.get(d+1));
 
+                    double outcome = num1 / num2;
+
+                    //Replace the answer thw the first value and delete the operator and second value
+                    array.set(d-1, String.valueOf(outcome));
+                    array.remove(d+1);
+                    array.remove(d);
+                }
+            }
+            
+            while (array.contains("+") || array.contains("-")){
+                int a, s;
+                a = array.indexOf("+");
+                s = array.indexOf("-");
+
+                if (a<s){
+                    double num1 = Integer.parseInt(array.get(a-1));
+                    double num2 = Integer.parseInt(array.get(a+1));
+
+                    double outcome = num1 + num2;
+
+                    //Replace the answer thw the first value and delete the operator and second value
+                    array.set(a-1, String.valueOf(outcome));
+                    array.remove(a+1);
+                    array.remove(a);
+
+                }
+                else{
+                    double num1 = Integer.parseInt(array.get(s-1));
+                    double num2 = Integer.parseInt(array.get(s+1));
+
+                    double outcome = num1 - num2;
+
+                    //Replace the answer thw the first value and delete the operator and second value
+                    array.set(s-1, String.valueOf(outcome));
+                    array.remove(s+1);
+                    array.remove(s);
                 }
             }
         }
+        
+        double result = Double.valueOf(array.get(0));
+        return result;
         
     }
             
