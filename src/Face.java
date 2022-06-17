@@ -196,6 +196,14 @@ public class Face extends javax.swing.JFrame {
 
         button20.setActionCommand("button20");
         button20.setLabel("Del All");
+        button20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button20MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                button20MouseEntered(evt);
+            }
+        });
 
         textArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         textArea1.addInputMethodListener(new java.awt.event.InputMethodListener() {
@@ -426,6 +434,14 @@ public class Face extends javax.swing.JFrame {
             textArea1.setText(opr.toString()); 
         }        
     }//GEN-LAST:event_button19MouseClicked
+
+    private void button20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button20MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button20MouseEntered
+
+    private void button20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button20MouseClicked
+        textArea1.setText(""); 
+    }//GEN-LAST:event_button20MouseClicked
 
     /**
      * @param args the command line arguments
