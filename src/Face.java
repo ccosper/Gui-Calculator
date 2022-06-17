@@ -330,37 +330,37 @@ public class Face extends javax.swing.JFrame {
 
     private void button11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button11MouseClicked
       int one = 1 ;
-      String str = "1";
+      String str = "1 ";
       textArea1.append(str);
     }//GEN-LAST:event_button11MouseClicked
 
     private void button11KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_button11KeyPressed
       int one = 1 ;
-      String str = "1";
+      String str = "1 ";
       textArea1.append(str);
     }//GEN-LAST:event_button11KeyPressed
 
     private void button14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button14MouseClicked
       int two = 2 ;
-      String str = "2";
+      String str = "2 ";
       textArea1.append(str);// TODO add your handling code here:
     }//GEN-LAST:event_button14MouseClicked
 
     private void button17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button17MouseClicked
       int three = 3;
-      String str = "3";
+      String str = "3 ";
       textArea1.append(str);
     }//GEN-LAST:event_button17MouseClicked
 
     private void button10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button10MouseClicked
       int four = 4;
-      String str = "4";
+      String str = "4 ";
       textArea1.append(str);
     }//GEN-LAST:event_button10MouseClicked
 
     private void button13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button13MouseClicked
       int five = 5;
-      String str = "5";
+      String str = "5 ";
       textArea1.append(str);
     }//GEN-LAST:event_button13MouseClicked
 
@@ -370,46 +370,46 @@ public class Face extends javax.swing.JFrame {
 
     private void button16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button16MouseClicked
       int six = 6; 
-      String str = "6";
+      String str = "6 ";
       textArea1.append(str);
     }//GEN-LAST:event_button16MouseClicked
 
     private void button7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button7MouseClicked
       int seven = 7;
-      String str = "7";
+      String str = "7 ";
       textArea1.append(str);
     }//GEN-LAST:event_button7MouseClicked
 
     private void button12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button12MouseClicked
       int eight = 8 ; 
-      String str = "8";
+      String str = "8 ";
       textArea1.append(str);
     }//GEN-LAST:event_button12MouseClicked
 
     private void button15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button15MouseClicked
       int nine = 9;
-      String str = "1";
+      String str = "1 ";
       textArea1.append(str);
     }//GEN-LAST:event_button15MouseClicked
 
     private void ADDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ADDMouseClicked
      
-      String str = "+";
+      String str = "+ ";
       textArea1.append(str); 
     }//GEN-LAST:event_ADDMouseClicked
 
     private void button2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button2MouseClicked
-      String str = "/";
+      String str = "/ ";
       textArea1.append(str);
     }//GEN-LAST:event_button2MouseClicked
 
     private void button3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button3MouseClicked
-        String str = "*";
+        String str = "* ";
       textArea1.append(str);
     }//GEN-LAST:event_button3MouseClicked
 
     private void button4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button4MouseClicked
-        String str = "-";
+        String str = "- ";
       textArea1.append(str);
     }//GEN-LAST:event_button4MouseClicked
 
