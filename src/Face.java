@@ -98,6 +98,11 @@ public class Face extends javax.swing.JFrame {
         });
 
         button5.setLabel("Enter");
+        button5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button5MouseClicked(evt);
+            }
+        });
 
         button6.setLabel("Sqr");
 
@@ -436,12 +441,17 @@ public class Face extends javax.swing.JFrame {
     }//GEN-LAST:event_button19MouseClicked
 
     private void button20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button20MouseEntered
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_button20MouseEntered
 
     private void button20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button20MouseClicked
         textArea1.setText(""); 
     }//GEN-LAST:event_button20MouseClicked
+
+    private void button5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button5MouseClicked
+        Calculate cal = new Calculate(textArea1.toString());
+        textArea2.setText(cal.enter());
+    }//GEN-LAST:event_button5MouseClicked
 
     /**
      * @param args the command line arguments
