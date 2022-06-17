@@ -3,50 +3,33 @@ import java.util.ArrayList;
 
 public class Calculate {
     
-    private String opr;
+    private final String opr;
     
     public Calculate(String opr){
         this.opr = opr;
     }
     
     public String enter() {
-        ArrayList<String> temp = new ArrayList<String>();
+        ArrayList<String> temp = new ArrayList<>();
+        String num = "";
         for(int i = 0; i < opr.length(); i++){
             char c = opr.charAt(i);
-            String num = "";
-            System.err.print(c+ " This is what is being added:");
-            boolean inter = false;
-            int j = 0;
+            
+            System.err.print(c+ " Adding:");
             
             switch (c) {
                 case '+':
-                    inter = false;
-                    //temp.add(num);
-                    temp.add(String.valueOf(c));
-                    break;
                 case '-':
-                    inter = false;
-                    temp.add(num);
-                    temp.add(String.valueOf(c));
-                    break;
                 case '*':
-                    inter = false;
-                    temp.add(num);
-                    temp.add(String.valueOf(c));
-                    break;
                 case '/':
-                    inter = false;
                     temp.add(num);
                     temp.add(String.valueOf(c));
+                    num = "";
                     break;
-                case '1': case '2': case '3': case '4': case '5':
-                case '6': case '7': case '8': case '9': case '0':                               
-                    inter = true;
-                    num += c;
                     
-                    if (i != opr.length() - 1){
-                        temp.add(num);
-                    }
+                default:                              
+                    num += c;
+
                     if (i == opr.length() - 1){
                         temp.add(num);
                     }
