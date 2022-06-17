@@ -76,27 +76,22 @@
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="button15" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="52" max="32767" attributes="0"/>
-                                      <Component id="button6" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="button16" min="-2" max="-2" attributes="0"/>
-                                  <Component id="button17" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="button5" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="ADD" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="button3" max="32767" attributes="0"/>
-                                  <Component id="button4" alignment="1" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="button15" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="52" max="32767" attributes="0"/>
+                              <Component id="button6" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="button2" min="-2" pref="45" max="-2" attributes="0"/>
+                          <Component id="button16" min="-2" max="-2" attributes="0"/>
+                          <Component id="button17" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="button5" alignment="1" max="32767" attributes="0"/>
+                              <Component id="ADD" alignment="1" max="32767" attributes="0"/>
+                              <Component id="button3" max="32767" attributes="0"/>
+                              <Component id="button4" alignment="1" max="32767" attributes="0"/>
                           </Group>
+                          <Component id="button2" alignment="1" min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -175,12 +170,8 @@
   <SubComponents>
     <Component class="java.awt.Button" name="ADD">
       <Properties>
-        <Property name="actionCommand" type="java.lang.String" value=""/>
         <Property name="label" type="java.lang.String" value="+"/>
       </Properties>
-      <AccessibilityProperties>
-        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="+"/>
-      </AccessibilityProperties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ADDMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ADDActionPerformed"/>
@@ -198,11 +189,17 @@
       <Properties>
         <Property name="label" type="java.lang.String" value="*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button3MouseClicked"/>
+      </Events>
     </Component>
     <Component class="java.awt.Button" name="button4">
       <Properties>
         <Property name="label" type="java.lang.String" value="-"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button4MouseClicked"/>
+      </Events>
     </Component>
     <Component class="java.awt.Button" name="button5">
       <Properties>
