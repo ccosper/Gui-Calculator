@@ -59,19 +59,47 @@ public class Calculate {
                 double outcome = pemdas(par);
                 array.set(p1, String.valueOf(outcome));
                 array.subList(p1+1, p2).clear();                        
-
             }
 
             while (array.contains("*") || array.contains("/")){
-                int m, d;
-                m = array.indexOf("*");
-                d = array.indexOf("/");
+                
+                if (array.contains("*") && array.contains("/")){
+                    int m, d;
+                    m = array.indexOf("*");
+                    d = array.indexOf("/");
 
-                if (m<d){
+                    if (m<d){
+                        double num1 = Integer.parseInt(array.get(m-1));
+                        double num2 = Integer.parseInt(array.get(m+1));
+
+                        double outcome = num1 * num2;
+
+                        //Replace the answer thw the first value and delete the operator and second value
+                        array.set(m-1, String.valueOf(outcome));
+                        array.remove(m+1);
+                        array.remove(m);
+
+                    }
+                    else{
+                        double num1 = Integer.parseInt(array.get(d-1));
+                        double num2 = Integer.parseInt(array.get(d+1));
+
+                        double outcome = num1 / num2;
+
+                        //Replace the answer thw the first value and delete the operator and second value
+                        array.set(d-1, String.valueOf(outcome));
+                        array.remove(d+1);
+                        array.remove(d);
+                    }
+                }
+                else if (array.contains("*")){
+                    int m;
+                    m = array.indexOf("*");
+
                     double num1 = Integer.parseInt(array.get(m-1));
                     double num2 = Integer.parseInt(array.get(m+1));
 
-                    double outcome = num1 * num2;
+                    double outcome = num1 + num2;
 
                     //Replace the answer thw the first value and delete the operator and second value
                     array.set(m-1, String.valueOf(outcome));
@@ -79,11 +107,14 @@ public class Calculate {
                     array.remove(m);
 
                 }
-                else{
+                else if (array.contains("/")){
+                    int d;
+                    d = array.indexOf("/");
+
                     double num1 = Integer.parseInt(array.get(d-1));
                     double num2 = Integer.parseInt(array.get(d+1));
 
-                    double outcome = num1 / num2;
+                    double outcome = num1 + num2;
 
                     //Replace the answer thw the first value and delete the operator and second value
                     array.set(d-1, String.valueOf(outcome));
@@ -93,11 +124,40 @@ public class Calculate {
             }
             
             while (array.contains("+") || array.contains("-")){
-                int a, s;
-                a = array.indexOf("+");
-                s = array.indexOf("-");
+                
+                if (array.contains("+") && array.contains("-")){
+                    int a, s;
+                    a = array.indexOf("+");
+                    s = array.indexOf("-");
 
-                if (a<s){
+                    if (a<s){
+                        double num1 = Integer.parseInt(array.get(a-1));
+                        double num2 = Integer.parseInt(array.get(a+1));
+
+                        double outcome = num1 + num2;
+
+                        //Replace the answer thw the first value and delete the operator and second value
+                        array.set(a-1, String.valueOf(outcome));
+                        array.remove(a+1);
+                        array.remove(a);
+
+                    }
+                    else{
+                        double num1 = Integer.parseInt(array.get(s-1));
+                        double num2 = Integer.parseInt(array.get(s+1));
+
+                        double outcome = num1 - num2;
+
+                        //Replace the answer thw the first value and delete the operator and second value
+                        array.set(s-1, String.valueOf(outcome));
+                        array.remove(s+1);
+                        array.remove(s);
+                    }
+                }       
+                else if (array.contains("+")){
+                    int a;
+                    a = array.indexOf("+");
+
                     double num1 = Integer.parseInt(array.get(a-1));
                     double num2 = Integer.parseInt(array.get(a+1));
 
@@ -109,17 +169,20 @@ public class Calculate {
                     array.remove(a);
 
                 }
-                else{
+                else if (array.contains("-")){
+                    int s;
+                    s = array.indexOf("-");
+
                     double num1 = Integer.parseInt(array.get(s-1));
                     double num2 = Integer.parseInt(array.get(s+1));
 
-                    double outcome = num1 - num2;
+                    double outcome = num1 + num2;
 
                     //Replace the answer thw the first value and delete the operator and second value
                     array.set(s-1, String.valueOf(outcome));
                     array.remove(s+1);
                     array.remove(s);
-                }
+                }    
             }
         }
         
