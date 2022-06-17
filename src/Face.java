@@ -449,7 +449,7 @@ public class Face extends javax.swing.JFrame {
     }//GEN-LAST:event_button20MouseClicked
 
     private void button5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button5MouseClicked
-        Calculate cal = new Calculate(textArea1.toString());
+        Calculate cal = new Calculate(textArea1.getText().toString());
         textArea2.setText(cal.enter());
     }//GEN-LAST:event_button5MouseClicked
 

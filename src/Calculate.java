@@ -14,13 +14,14 @@ public class Calculate {
         for(int i = 0; i < opr.length(); i++){
             char c = opr.charAt(i);
             String num = "";
+            System.err.print(c+ " This is what is being added:");
             boolean inter = false;
             int j = 0;
             
             switch (c) {
                 case '+':
                     inter = false;
-                    temp.add(num);
+                    //temp.add(num);
                     temp.add(String.valueOf(c));
                     break;
                 case '-':
@@ -43,6 +44,9 @@ public class Calculate {
                     inter = true;
                     num += c;
                     
+                    if (i != opr.length() - 1){
+                        temp.add(num);
+                    }
                     if (i == opr.length() - 1){
                         temp.add(num);
                     }
