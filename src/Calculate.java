@@ -24,7 +24,10 @@ public class Calculate {
                 case '/':
                 case '(':
                 case ')':
-                    temp.add(num);
+                    if (num != ""){
+                        temp.add(num);
+                    }
+
                     temp.add(String.valueOf(c));
                     num = "";
                     break;
@@ -138,7 +141,7 @@ public class Calculate {
                         double num1 = Integer.parseInt(array.get(a-1));
                         double num2 = Integer.parseInt(array.get(a+1));
 
-                        double outcome = num1 + num2;
+                        double outcome = num1 - num2;
                         
                         //Replace the answer thw the first value and delete the operator and second value
                         //array.set(a-1, String.valueOf(outcome));
