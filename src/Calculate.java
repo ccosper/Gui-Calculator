@@ -41,6 +41,7 @@ public class Calculate {
         
         System.err.println(temp.toString());
         double result = pemdas(temp);
+        System.err.println("THis is what you get after pemdas: "+ result);
         return result;
     }
     
@@ -75,9 +76,10 @@ public class Calculate {
                         double outcome = num1 * num2;
 
                         //Replace the answer thw the first value and delete the operator and second value
-                        array.set(m-1, String.valueOf(outcome));
+                        //array.set(m-1, String.valueOf(outcome));
                         array.remove(m+1);
                         array.remove(m);
+                        array.set(m-1, String.valueOf(outcome));
 
                     }
                     else{
@@ -87,9 +89,10 @@ public class Calculate {
                         double outcome = num1 / num2;
 
                         //Replace the answer thw the first value and delete the operator and second value
-                        array.set(d-1, String.valueOf(outcome));
+                        //array.set(d-1, String.valueOf(outcome));
                         array.remove(d+1);
                         array.remove(d);
+                        array.set(d-1, String.valueOf(outcome));
                     }
                 }
                 else if (array.contains("*")){
@@ -102,10 +105,10 @@ public class Calculate {
                     double outcome = num1 + num2;
 
                     //Replace the answer thw the first value and delete the operator and second value
-                    array.set(m-1, String.valueOf(outcome));
+                    //array.set(m-1, String.valueOf(outcome));
                     array.remove(m+1);
                     array.remove(m);
-
+                    array.set(m-1, String.valueOf(outcome));
                 }
                 else if (array.contains("/")){
                     int d;
@@ -117,9 +120,10 @@ public class Calculate {
                     double outcome = num1 + num2;
 
                     //Replace the answer thw the first value and delete the operator and second value
-                    array.set(d-1, String.valueOf(outcome));
+                    //array.set(d-1, String.valueOf(outcome));
                     array.remove(d+1);
                     array.remove(d);
+                    array.set(d-1, String.valueOf(outcome));
                 }
             }
             
@@ -135,11 +139,12 @@ public class Calculate {
                         double num2 = Integer.parseInt(array.get(a+1));
 
                         double outcome = num1 + num2;
-
+                        
                         //Replace the answer thw the first value and delete the operator and second value
-                        array.set(a-1, String.valueOf(outcome));
+                        //array.set(a-1, String.valueOf(outcome));
                         array.remove(a+1);
                         array.remove(a);
+                        array.set(a-1, String.valueOf(outcome));
 
                     }
                     else{
@@ -147,11 +152,12 @@ public class Calculate {
                         double num2 = Integer.parseInt(array.get(s+1));
 
                         double outcome = num1 - num2;
-
+                              
                         //Replace the answer thw the first value and delete the operator and second value
-                        array.set(s-1, String.valueOf(outcome));
+                        //array.set(s-1, String.valueOf(outcome));
                         array.remove(s+1);
                         array.remove(s);
+                         array.set(s-1, String.valueOf(outcome));
                     }
                 }       
                 else if (array.contains("+")){
@@ -164,9 +170,10 @@ public class Calculate {
                     double outcome = num1 + num2;
 
                     //Replace the answer thw the first value and delete the operator and second value
-                    array.set(a-1, String.valueOf(outcome));
+                   // array.set(a-1, String.valueOf(outcome));
                     array.remove(a+1);
                     array.remove(a);
+                    array.set(a-1, String.valueOf(outcome));
 
                 }
                 else if (array.contains("-")){
@@ -179,14 +186,16 @@ public class Calculate {
                     double outcome = num1 + num2;
 
                     //Replace the answer thw the first value and delete the operator and second value
-                    array.set(s-1, String.valueOf(outcome));
+                    //array.set(s-1, String.valueOf(outcome));
                     array.remove(s+1);
                     array.remove(s);
+                    array.set(s-1, String.valueOf(outcome));
                 }    
             }
         }
         
         double result = Double.valueOf(array.get(0));
+        System.err.println("Return result: "+result);
         return result;
         
     }
