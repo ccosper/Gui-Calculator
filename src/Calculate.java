@@ -105,7 +105,7 @@ public class Calculate {
                     double num1 = Integer.parseInt(array.get(m-1));
                     double num2 = Integer.parseInt(array.get(m+1));
 
-                    double outcome = num1 + num2;
+                    double outcome = num1 * num2;
 
                     //Replace the answer thw the first value and delete the operator and second value
                     //array.set(m-1, String.valueOf(outcome));
@@ -120,7 +120,7 @@ public class Calculate {
                     double num1 = Integer.parseInt(array.get(d-1));
                     double num2 = Integer.parseInt(array.get(d+1));
 
-                    double outcome = num1 + num2;
+                    double outcome = num1 / num2;
 
                     //Replace the answer thw the first value and delete the operator and second value
                     //array.set(d-1, String.valueOf(outcome));
@@ -166,9 +166,10 @@ public class Calculate {
                 else if (array.contains("+")){
                     int a;
                     a = array.indexOf("+");
-
+                    System.err.println("This is what num1 is: "+  Integer.parseInt(array.get(a-1)));
                     double num1 = Integer.parseInt(array.get(a-1));
                     double num2 = Integer.parseInt(array.get(a+1));
+                    
 
                     double outcome = num1 + num2;
 
@@ -176,6 +177,7 @@ public class Calculate {
                    // array.set(a-1, String.valueOf(outcome));
                     array.remove(a+1);
                     array.remove(a);
+                    
                     array.set(a-1, String.valueOf(outcome));
 
                 }
@@ -186,7 +188,7 @@ public class Calculate {
                     double num1 = Integer.parseInt(array.get(s-1));
                     double num2 = Integer.parseInt(array.get(s+1));
 
-                    double outcome = num1 + num2;
+                    double outcome = num1 - num2;
 
                     //Replace the answer thw the first value and delete the operator and second value
                     //array.set(s-1, String.valueOf(outcome));
